@@ -1,38 +1,28 @@
-#
-# Be sure to run `pod lib lint PXBlockAlertView.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# Any lines starting with a # are optional, but encouraged
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "PXBlockAlertView"
   s.version          = "0.1.0"
-  s.summary          = "A short description of PXBlockAlertView."
+  s.summary          = "A class with shorthand class methods for displaying alerts."
   s.description      = <<-DESC
-                       An optional longer description of PXBlockAlertView
+                       A set of class methods which allow you to present alerts with one or two buttons.
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       On iOS 7, it uses `UIAlertView`.  On iOS 8 it uses `UIAlertController`.
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/PXBlockAlertView"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://git.pixio.com/"
   s.license          = 'MIT'
   s.author           = { "Daniel Blakemore" => "DanBlakemore@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/PXBlockAlertView.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.source = {
+    :git => "git@git.pixio.com:ios-pods/pxalertview.git",
+    :tag => s.version.to_s
+  }
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
-    'PXBlockAlertView' => ['Pod/Assets/*.png']
+    'AlertViewBlocks' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.dependency 'UIAlertController-BetterConstructor'
+  s.frameworks = 'UIKit'
 end
