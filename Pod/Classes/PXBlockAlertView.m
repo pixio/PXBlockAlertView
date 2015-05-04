@@ -1,5 +1,5 @@
 //
-//  PXAlertView.m
+//  PXBlockAlertView.m
 //
 //  Created by Daniel Blakemore on 9/5/13.
 //
@@ -24,15 +24,15 @@
 //  THE SOFTWARE.
 //
 
-#import "PXAlertView.h"
+#import "PXBlockAlertView.h"
 
 #import <UIAlertController-BetterConstructor/UIAlertController+BetterConstructor.h>
 
-@interface PXAlertView () <UIAlertViewDelegate>
+@interface PXBlockAlertView () <UIAlertViewDelegate>
 
 @end
 
-@implementation PXAlertView
+@implementation PXBlockAlertView
 {
     NSString * _title;
     NSString * _message;
@@ -44,7 +44,7 @@
     NSInteger _offset;
 }
 
-static PXAlertView * sharedObject;
+static PXBlockAlertView * sharedObject;
 
 - (id)initWithTitle:(NSString*)title message:(NSString*)message acceptButtonTitle:(NSString*)acceptTitle block:(button_block_t)acceptBlock cancelButtonTitle:(NSString*)cancelTitle block:(button_block_t)cancelBlock
 {
@@ -83,13 +83,13 @@ static PXAlertView * sharedObject;
 
 + (void)showWithTitle:(NSString*)title message:(NSString*)message acceptButtonTitle:(NSString*)acceptTitle block:(button_block_t)acceptBlock cancelButtonTitle:(NSString*)cancelTitle block:(button_block_t)cancelBlock
 {
-    sharedObject = [[PXAlertView alloc] initWithTitle:title message:message acceptButtonTitle:acceptTitle block:acceptBlock cancelButtonTitle:cancelTitle block:cancelBlock];
+    sharedObject = [[PXBlockAlertView alloc] initWithTitle:title message:message acceptButtonTitle:acceptTitle block:acceptBlock cancelButtonTitle:cancelTitle block:cancelBlock];
     [sharedObject show];
 }
 
 + (void)showWithTitle:(NSString*)title message:(NSString*)message acceptButtonTitle:(NSString*)acceptTitle block:(button_block_t)acceptBlock
 {
-    sharedObject = [[PXAlertView alloc] initWithTitle:title message:message acceptButtonTitle:acceptTitle block:acceptBlock cancelButtonTitle:nil block:nil];
+    sharedObject = [[PXBlockAlertView alloc] initWithTitle:title message:message acceptButtonTitle:acceptTitle block:acceptBlock cancelButtonTitle:nil block:nil];
     [sharedObject show];
 }
 

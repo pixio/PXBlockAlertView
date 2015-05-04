@@ -1,5 +1,5 @@
 //
-//  PXAlertView.h
+//  PXBlockAlertView.h
 //
 //  Created by Daniel Blakemore on 9/5/13.
 //
@@ -26,14 +26,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class PXAlertView;
+@class PXBlockAlertView;
 
-typedef void (^ button_block_t)(PXAlertView * sender);
+typedef void (^ button_block_t)(PXBlockAlertView * sender);
 
 /**
  *  UIAlertView-like class which takes blocks for the buttons rather than requiring a delegate.
  */
-@interface PXAlertView : NSObject
+@interface PXBlockAlertView : NSObject
 
 /**
  *  Show an alert with two buttons.

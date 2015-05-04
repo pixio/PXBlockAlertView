@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PXBlockAlertView"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A class with shorthand class methods for displaying alerts."
   s.description      = <<-DESC
                        A set of class methods which allow you to present alerts with one or two buttons.
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Daniel Blakemore" => "DanBlakemore@gmail.com" }
   s.source = {
-    :git => "git@git.pixio.com:ios-pods/pxalertview.git",
+    :git => "git@git.pixio.com:ios-pods/pxblockalertview.git",
     :tag => s.version.to_s
   }
   s.platform     = :ios, '7.0'
