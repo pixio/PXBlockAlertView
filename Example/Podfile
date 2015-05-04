@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'PXBlockAlertView', :exclusive => true do
+  pod "PXBlockAlertView", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "PXBlockAlertView", :path => "../"
+
+  
+end
