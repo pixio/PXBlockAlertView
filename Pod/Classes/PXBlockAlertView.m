@@ -67,18 +67,20 @@ static PXBlockAlertView * sharedObject;
 {
     if (_accept) {
         _accept(self);
-        _accept = nil;
-        _cancel = nil;
     }
+    _accept = nil;
+    _cancel = nil;
+    [PXBlockAlertView suicide];
 }
 
 - (void)canceled
 {
     if (_cancel) {
         _cancel(self);
-        _cancel = nil;
-        _accept = nil;
     }
+    _cancel = nil;
+    _accept = nil;
+    [PXBlockAlertView suicide];
 }
 
 + (void)showWithTitle:(NSString*)title message:(NSString*)message acceptButtonTitle:(NSString*)acceptTitle block:(button_block_t)acceptBlock cancelButtonTitle:(NSString*)cancelTitle block:(button_block_t)cancelBlock
@@ -91,6 +93,11 @@ static PXBlockAlertView * sharedObject;
 {
     sharedObject = [[PXBlockAlertView alloc] initWithTitle:title message:message acceptButtonTitle:acceptTitle block:acceptBlock cancelButtonTitle:nil block:nil];
     [sharedObject show];
+}
+
++ (void)suicide
+{
+    sharedObject = nil;
 }
 
 - (void)show

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PXBlockAlertView"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "A class with shorthand class methods for displaying alerts."
   s.description      = <<-DESC
                        A set of class methods which allow you to present alerts with one or two buttons.
