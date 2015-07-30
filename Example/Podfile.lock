@@ -1,5 +1,5 @@
 PODS:
-  - PXBlockAlertView (0.1.0):
+  - PXBlockAlertView (0.1.3):
     - UIAlertController-BetterConstructor
   - UIAlertController-BetterConstructor (0.1.1)
 
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PXBlockAlertView: 9a1b2145fcf7d1849d55a3acc09e9491de2eb710
+  PXBlockAlertView: 92fe13111917e43f73b5724d160d756874a48026
   UIAlertController-BetterConstructor: d010f5aae55923c2bc777c94b06cba1e3f54b408
 
-COCOAPODS: 0.37.0
+COCOAPODS: 0.38.2

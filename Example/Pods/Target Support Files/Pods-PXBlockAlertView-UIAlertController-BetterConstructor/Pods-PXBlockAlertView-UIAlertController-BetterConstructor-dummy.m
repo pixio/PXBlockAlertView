@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_PXBlockAlertView_UIAlertController_BetterConstructor : NSObject
-@end
-@implementation PodsDummy_Pods_PXBlockAlertView_UIAlertController_BetterConstructor
-@end
