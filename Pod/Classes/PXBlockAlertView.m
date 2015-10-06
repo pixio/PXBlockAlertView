@@ -110,7 +110,13 @@ static PXBlockAlertView * sharedObject;
         }, nil];
         
         // should probably deal with extensions here at some point
-        [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentViewController:ac animated:TRUE completion:nil];
+        UIWindow *appWindow = [[[UIApplication sharedApplication] delegate] window];
+        if ([[appWindow rootViewController] presentedViewController]) {
+            //Handle Warning: Attempt to present <UIAlertController:> on <ViewController:> whose view is not in the window hierarchy!
+            [[[appWindow rootViewController] presentedViewController] presentViewController:ac animated:YES completion:nil];
+        } else {
+            [[appWindow rootViewController] presentViewController:ac animated:YES completion:nil];
+        }
     } else {
         [[[UIAlertView alloc] initWithTitle:_title message:_message delegate:self cancelButtonTitle:_cancelTitle otherButtonTitles:_acceptTitle, nil] show];
     }
