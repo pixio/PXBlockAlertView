@@ -26,7 +26,7 @@
 
 #import "PXBlockAlertView.h"
 
-#import <UIAlertController-BetterConstructor/UIAlertController+BetterConstructor.h>
+@import UIAlertController_BetterConstructor;
 
 @interface PXBlockAlertView () <UIAlertViewDelegate>
 

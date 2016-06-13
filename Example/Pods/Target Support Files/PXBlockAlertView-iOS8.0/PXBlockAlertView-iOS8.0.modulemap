@@ -1,0 +1,6 @@
+framework module PXBlockAlertView {
+  umbrella header "PXBlockAlertView-iOS8.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

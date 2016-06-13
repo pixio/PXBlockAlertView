@@ -18,7 +18,7 @@ Class methods that give you the ability to show an alert by providing a title, m
 
 ## Usage
 
-1. Import <PXBlockAlertView/PXBlockAlertView.h>.  
+1. Import <PXBlockAlertView/PXBlockAlertView.h>.
 2. Call one of the showWith.. methods.
 3. ???
 4. \</project>
@@ -26,6 +26,8 @@ Class methods that give you the ability to show an alert by providing a title, m
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+This pod requires iOS 8.0 and `!use_frameworks`.
 
 ## Installation
 
