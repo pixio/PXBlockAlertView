@@ -28,7 +28,7 @@
 
 @class PXBlockAlertView;
 
-typedef void (^ button_block_t)(PXBlockAlertView * sender);
+typedef void (^ button_block_t)(PXBlockAlertView * _Nonnull sender);
 
 /**
  *  UIAlertView-like class which takes blocks for the buttons rather than requiring a delegate.
@@ -45,7 +45,7 @@ typedef void (^ button_block_t)(PXBlockAlertView * sender);
  *  @param cancelTitle the title for the cancel button
  *  @param cancelBlock the block to run if the cancel button is pressed
  */
-+ (void)showWithTitle:(NSString*)title message:(NSString*)message acceptButtonTitle:(NSString*)acceptTitle block:(button_block_t)acceptBlock cancelButtonTitle:(NSString*)cancelTitle block:(button_block_t)cancelBlock;
++ (void)showWithTitle:(nullable NSString*)title message:(nullable NSString*)message acceptButtonTitle:(nullable NSString*)acceptTitle block:(nonnull button_block_t)acceptBlock cancelButtonTitle:(nullable NSString*)cancelTitle block:(nonnull button_block_t)cancelBlock;
 
 /**
  *  Show an alert with one button.
@@ -55,6 +55,6 @@ typedef void (^ button_block_t)(PXBlockAlertView * sender);
  *  @param acceptTitle the title of the accept button (the only button)
  *  @param acceptBlock the block to run if the accept button is pressed
  */
-+ (void)showWithTitle:(NSString*)title message:(NSString*)message acceptButtonTitle:(NSString*)acceptTitle block:(button_block_t)acceptBlock;
++ (void)showWithTitle:(nullable NSString*)title message:(nullable NSString*)message acceptButtonTitle:(nullable NSString*)acceptTitle block:(nonnull button_block_t)acceptBlock;
 
 @end
